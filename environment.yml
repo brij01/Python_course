@@ -1,0 +1,38 @@
+name: array-oriented-programming
+
+channels:
+  - conda-forge
+
+dependencies:
+  # Python itself
+  - python=3.11
+
+  # for building the JupyterBook
+  - jupyter-book
+  - ghp-import
+
+  # JupyterLab interface
+  - jupyterlab
+
+  # core scientific Python libraries
+  - numpy
+  - pandas
+  - matplotlib
+  - ipympl   # Matplotlib widgets
+  - scikit-learn
+  - h5py
+  - pyarrow
+
+  # libraries for particle physics
+  - uproot
+  - awkward
+  - vector
+  - hist
+  - hepunits
+  - particle
+
+  # compilers
+  - numba
+  - pybind11
+  - clang-tools
+  - cxx-compiler
