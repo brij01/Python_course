@@ -49,5 +49,5 @@ parse:
 
 sphinx:
   config:
-    html_extra_path:
+    html_extra_path: []
     nb_execution_show_tb: true
