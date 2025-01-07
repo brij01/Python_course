@@ -7,9 +7,10 @@ dependencies:
   # Python itself
   - python=3.11
 
-  # for building the JupyterBook
+  # for building and testing the JupyterBook
   - jupyter-book
   - ghp-import
+  - nbconvert
 
   # JupyterLab interface
   - jupyterlab

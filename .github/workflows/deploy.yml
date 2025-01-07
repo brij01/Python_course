@@ -47,6 +47,15 @@ jobs:
           cache-environment: true
           post-cleanup: "all"
 
+      # Test lesson 1 solutions
+      - name: Test lesson 1 solutions
+        working-directory: solutions-NO-PEEKING
+        run: |
+          jupyter nbconvert --to python lesson-1-project-solutions.ipynb
+          sed 's/# \(In\[[0-9]*\]:\)/print("\1")/' lesson-1-project-solutions.py > lesson-1-project-solutions-RUN.py
+          cat -n lesson-1-project-solutions-RUN.py
+          python lesson-1-project-solutions-RUN.py
+
       # Build the book
       - name: Build the book
         run: |
