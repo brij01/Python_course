@@ -6,6 +6,12 @@ on:
     branches:
       - main
 
+  pull_request:
+
+  schedule:
+    # Every day at 4am UTC (10pm Chicago, 5am Geneva)
+    - cron: "00 4 * * *"
+
 env:
   BASE_URL: /${{ github.event.repository.name }}
 
@@ -18,22 +24,28 @@ concurrency:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+
     # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
     permissions:
       pages: write
       id-token: write
+
+    # Required for micromamba to activate
+    defaults:
+      run:
+        shell: "bash -l {0}"
+
     steps:
       - uses: actions/checkout@v3
 
       # Install dependencies
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+      - name: Set up Python via Micromamba
+        uses: mamba-org/setup-micromamba@v2
         with:
-          python-version: 3.11
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+          environment-file: environment.yml
+          init-shell: bash
+          cache-environment: true
+          post-cleanup: "all"
 
       # Build the book
       - name: Build the book
@@ -49,4 +61,6 @@ jobs:
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
+        # only deploy if merging into main, not if testing a PR
+        if: github.ref_name == 'main'
         uses: actions/deploy-pages@v2
