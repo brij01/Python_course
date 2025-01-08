@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Lesson 1: Python
+# Lesson 1: The Python language
 
 +++
 
