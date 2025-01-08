@@ -936,7 +936,7 @@ y = np.sin(4*t)
 plt.plot(x, y);
 ```
 
-## Lesson 2 project: Higgs decay combinatorics
+## Lesson 2 project: Higgs decays from arrays
 
 +++
 

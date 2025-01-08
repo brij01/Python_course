@@ -67,6 +67,15 @@ jobs:
           cat -n lesson-2-project-solutions-RUN.py
           python lesson-2-project-solutions-RUN.py
 
+      # Test lesson 3 solutions
+      - name: Test lesson 3 solutions
+        working-directory: solutions-NO-PEEKING
+        run: |
+          jupyter nbconvert --to python lesson-3-project-solutions.ipynb
+          sed 's/^# \(In\[[0-9]*\]:\)/print("\1") #/' lesson-3-project-solutions.py > lesson-3-project-solutions-RUN.py
+          cat -n lesson-3-project-solutions-RUN.py
+          python lesson-3-project-solutions-RUN.py
+
       # Build the book
       - name: Build the book
         run: |
