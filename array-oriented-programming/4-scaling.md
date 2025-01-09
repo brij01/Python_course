@@ -11,6 +11,8 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
+execution:
+  timeout: 120
 ---
 
 # Lesson 4: Vertical and horizontal scaling
