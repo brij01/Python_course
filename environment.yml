@@ -44,3 +44,4 @@ dependencies:
   - distributed
   - dask-awkward
   - graphviz
+  - python-graphviz
