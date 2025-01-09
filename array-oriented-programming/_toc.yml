@@ -7,3 +7,4 @@ chapters:
 - file: 1-python
 - file: 2-arrays
 - file: 3-ragged
+- file: 4-scaling
