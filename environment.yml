@@ -33,7 +33,13 @@ dependencies:
   - particle
 
   # compilers
-  - numba
-  - pybind11
   - clang-tools
   - cxx-compiler
+  - pybind11
+  - numba
+  - jax
+
+  # distributed computing
+  - dask
+  - distributed
+  - dask-awkward

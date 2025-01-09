@@ -88,7 +88,7 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build array-oriented-programming
+          jupyter-book build -W array-oriented-programming
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact

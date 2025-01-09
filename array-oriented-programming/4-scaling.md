@@ -132,7 +132,7 @@ quadratic_formula_c.run(ptr(a), ptr(b), ptr(c), ptr(output))
 output = (-b + np.sqrt(b**2 - 4*a*c)) / (2*a)
 ```
 
-The corresponding formula in NumPy is about 3× slower.
+The corresponding formula in NumPy is about 2× slower.
 
 Hidden in the NumPy expression are intermediate arrays: each operation creates a new array, and most of them are only needed temporarily. The above is roughly equivalent to this:
 
@@ -154,7 +154,7 @@ tmp8 = np.multiply(2, a)         # 2*a
 np.divide(tmp7, tmp8)            # tmp7 / tmp8     This is the result!
 ```
 
-("Roughly" because NumPy attempts to "fuse" some operations to avoid intermediate arrays, which accounts for this 30% difference in speed. But the 3× faster C function is completely "fused".)
+("Roughly" because NumPy attempts to "fuse" some operations to avoid intermediate arrays, which accounts for this small difference in speed. But the 2× faster C function is completely "fused".)
 
 Remember, though, that NumPy is hundreds of times faster than a Python `for` loop,
 
@@ -792,6 +792,7 @@ In addition to the collection types listed above, there is a [dask-awkward](http
 ```{code-cell} ipython3
 import uproot
 import awkward as ak
+import dask_awkward as dak
 ```
 
 ```{code-cell} ipython3
