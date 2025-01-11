@@ -22,9 +22,7 @@ You can run everything on your own computer if you have the following software i
 :literal: true
 ```
 
-**Note:** to run the GPU lessons, you'll also need an Nvidia GPU and the following packages:
-
-* ...
+**Note:** to do [Lesson 5: Python on GPUs](5-gpu.ipynb), you'll also need an Nvidia GPU and the following packages: `cupy` and `numba`. See the lesson for hints on installing CUDA.
 
 ## Table of contents
 
