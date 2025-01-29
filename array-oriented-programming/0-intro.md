@@ -12,7 +12,17 @@ One way to do that is to launch a Codespace from the [hsf-training/array-oriente
 
 The first time your Codespace launches, it will take a few minutes to install all of the software. Once it's done, navigate to the `notebooks` directory in the left side-bar and open `lesson-1-workbook.ipynb`.
 
-**Note:** you can't run the GPU lessons in codespaces, since it doesn't have a GPU. [Google Colab](https://colab.research.google.com/) has GPUs, but you'd have to install the software yourself.
+![](img/github-codespaces-2.png){. width="60%"}
+
+Once you evaluate a cell in the notebook, Codespaces will ask you if you want to install the Python extension (yes, you do) and will ask which kernel to use: you want the recommended option, `venv/bin/python`.
+
+![](img/github-codespaces-3.png){. width="100%"}
+
+![](img/github-codespaces-4.png){. width="100%"}
+
+![](img/github-codespaces-5.png){. width="100%"}
+
+**Note:** you can't run [Lesson 5: Python on GPUs](5-gpu.ipynb) in Codespaces because it doesn't have a GPU. [Google Colab](https://colab.research.google.com/) has GPUs, but you'd have to install the software yourself.
 
 ## On your own computer
 
